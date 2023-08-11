@@ -10,13 +10,15 @@ html {
 
 .page {
   inline-size: 1200px;
-  block-size: 100%;
+  block-size: 100vh;
   margin: 0 auto;
   color: #fff;
   font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -65,30 +67,31 @@ ol {
 }
 
 .content {
-  inline-size: 100%;
+  max-inline-size: 1140px;
   display: flex;
   flex-direction: row;
   gap: 30px;
   align-items: flex-end;
   justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
 }
 
 .result {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .result__video-container {
   position: relative;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .search-form {
   display: flex;
   flex-direction: row;
   gap: 40px;
+  margin-top: 4px;
 }
 
 .search-form__fieldset {
@@ -106,9 +109,10 @@ ol {
   border-bottom: 1px solid #fff;
   border-right: none;
   background: transparent;
-  font-size: inherit;
-  font-family: inherit;
-  color: inherit;
+  font-size: 18px;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
+  color: rgba(255, 255, 255, 0.70);
+  line-height: 23px;
 }
 
 .search-form__textfield:focus {
@@ -213,12 +217,11 @@ ol {
 
 .content__details {
   inline-size: 100%;
-  block-size: auto;;
   width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 26px;
+  gap: 22px;
 }
 
 .title {
@@ -256,8 +259,8 @@ ol {
   text-decoration: none;
   display: block;
   color: #fff;
-  margin: 2px;
-}
+  padding: 2px;
+  }
 
 .content__card-link:hover {
   text-decoration: underline;
@@ -273,7 +276,6 @@ ol {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .content__card-link_current {
@@ -283,7 +285,7 @@ ol {
 .content__video-card-thumbnail {
   inline-size: 194px;
   block-size: 103px;
-  object-fit: scale-down;
+  object-fit: cover;
   object-position: center;
 }
 
